@@ -1,0 +1,32 @@
+import unittest
+
+count = 0
+class TestCollatz(unittest.TestCase):
+
+    def test_collatz(self):
+        assert self.collatz(10) == 5, "Result should be 5"
+
+    def collatz(self, num):
+        global count
+        if num != 2:
+            if num % 2 == 0:
+                count += 1
+                self.collatz(self.argiseven(num))
+            elif num % 2 != 0:
+                count += 1
+                self.collatz(self.argisodd(num))
+        print("Count ", count)
+        return count
+
+
+    def argiseven(even_num):
+        print("Even number is ", even_num)
+        return even_num / 2
+
+
+    def argisodd(odd_num):
+        print("Odd number is ", odd_num)
+        return (odd_num * 3) + 1
+
+    if __name__ == '__main__':
+        test_collatz()

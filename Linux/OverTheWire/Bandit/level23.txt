@@ -1,0 +1,5 @@
+The password for the next level is stored in a file called spaces in this filename located in the home directory
+
+cd up 1 directory cat bandit2/*
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
